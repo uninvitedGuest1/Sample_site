@@ -1,0 +1,220 @@
+/*
+This is our main style file.
+don't forget to save and refresh everytime you write a new line so that you see what changes you actually made
+If no change occurs, try to check that the spelling in your html head matches the name of the file
+Author: Samuel Ochaka
+*/
+
+/* 
+always add this *{...} below to all your css files
+"*" means every item will always have these styles 
+I'm sure you all know about what margin and padding do
+box-sizing: border-box makes sure that our items don't go out of the screen when we add margin and padding later on
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* 
+when we add "." before writing a word in css it means that word is a class name so here we are calling the class called main: check your html file and make sure you can see each item we call
+*/
+.main {
+    width: 100vw; /* set width to screen width */
+    height: 100vh; /* set height to screen height, ^save and refresh*/
+}
+
+.navbar{
+    /* background-color: navy; */
+    padding: 20px; /* This means add padding of 20px to all sides.  ^save and refresh */
+    display: flex; /* let the children of navbar i.e span and ul be on the same line. ^save and refresh */
+    justify-content: space-between; /* let the children of navbar i.e span and ul be on the far ends from one another. ^save and refresh */
+}
+
+/* Here we are calling a child of navbar which is just a "ul" tag */
+.navbar ul {
+    display: flex; /* let the children of ul i.e the li tags be on the same line. ^save and refresh */
+}
+
+/* We are calling li a child of ul which ul is a child of navbar */
+.navbar ul li {
+    list-style-type: none; /* this is to remove the dot that comes with every list item  ^save and refresh */
+    margin-right: 50px; /*  ^save and refresh  */
+}
+
+/* We are calling a, a child of li a child of ul a child of navbar */
+.navbar ul li a {
+    color: navy; /*  ^save and refresh */
+    text-decoration: none; /* remove that underlining  ^save and refresh*/
+    font-size: 20px; /* ^save and refresh */
+}
+
+/* By now you know what this is */
+.logo a{
+    color: navy; /*  ^save and refresh */
+    text-decoration: none; /* remove that underlining  ^save and refresh*/
+    font-size: 20px; /* ^save and refresh */
+}
+
+.hero {
+    margin-top: 100px ; /* save and refresh */
+    text-align: center; /* put text in the center of the x-axis of out page. save and refresh */
+}
+
+.hero h1{
+    font-size: 50px; /* save and refresh */
+}
+
+.hero p {
+    font-size: 20px; /* save and refresh */
+    margin-bottom: 20px; /* save and refresh */
+}
+
+.hero a {
+    padding: 10px 20px; /* this means top & bottom: 10px, left & right: 20px */
+    background: limegreen; /* save and refresh */
+    border-bottom-left-radius: 10px; /* save and refresh */
+    border-top-right-radius: 10px; /* save and refresh */
+    text-decoration: none; /* save and refresh */
+    color: white; /* save and refresh */
+    font-size: 18px; /* save and refresh */
+}
+
+.hero img {
+    margin-top: 100px;
+    width:100%;
+    height: 300px;
+}
+
+/* remember services had an "id" and not a "class". we call id by using "#"*/
+
+#services {
+    background: whitesmoke; /* save and refresh */
+    padding: 100px; /* save and refresh */
+}
+
+#services h1 {
+    font-size: 40px; /* save and refresh */
+    margin-bottom: 50px; /* save and refresh */
+    text-align: center;
+}
+
+#services ol li {
+    list-style-type: none; /* removing the 1. 2. 3. save and refresh */
+}
+
+.left {
+    display: flex; /* puts all children of .left on the same line save and refresh */
+    flex-direction: column; /* puts children of .left in a columnar display. save and refresh */
+    align-items: flex-start; /* children of .left will be aligned to the left */
+    margin: 50px 0; /* margin top & bottom: 50px, left and right: 0 save and refresh */
+}
+.right {
+    display: flex; /* puts all children of .right on the same line save and refresh */
+    flex-direction: column; /* puts children of .right in a columnar display. save and refresh */
+    align-items: flex-end; /* children of .right will be aligned to the right save and refresh */
+    margin: 50px 0; /* margin top & bottom: 50px, left and right: 0 save and refresh */
+}
+
+.item {
+    width: 50%; /* .item will be 50% of its parent's width save and refresh */
+}
+
+#about {
+    width: 100%;
+    height: 500px; /* save and refresh */
+    text-align: center; /* save and refresh */
+    padding: 200px 100px; /* adds padding top and bottom: 200px, left and right: 100px save and refresh */
+    background-image:url('2.jpg'); /*this is how you add a background image. save and refresh. */
+    background-size: cover;/* Tells the image to fit in the space neatly. save and refresh */
+    background-position:center;/* Tells the center of the image to be in the center of the div. save and refresh */
+    background-attachment: fixed;/* Tells the image to stay in one place as you scoll. save, refresh and scroll to see */
+    color: #fff; /* color of text in this div */
+}
+
+#about a {
+    text-decoration: none; /* remove underlining. save and refresh */
+    color: limegreen; /* save and refresh */
+}
+
+#contact {
+    display: flex; /* Tells the children to be in a single line. save and refresh */
+    justify-content: center; /* Tells the children to go to the center of the x-axis. save and refresh */
+    align-items: center;/* Tells the children to go to the center of the y-axis. save and refresh */
+    padding: 220px 0 ;/* padding top & bottom: 220px, left & right: 0 save and refresh */
+    background-color: #f9f9f9; /* save and refresh */
+}
+
+/*
+ By now we don't need much explanation 
+save and refresh after every step. Ask any questions in the group
+*/
+form {
+    padding: 30px; 
+    background-color: white;
+    border-radius: 20px;
+    height: fit-content;
+}
+
+.inputs{
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;/* this means do not go to the next line */
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #f5f5f5;
+}
+
+input {
+    border-radius: 20px;
+    border: none;
+    padding: 10px 20px;
+    background-color: #eee;
+    width: 100%;
+    font-size: 18px;
+}
+
+textarea {
+    border-radius: 20px;
+    border: none;
+    padding: 10px 20px;
+    margin: 20px 0;
+    background-color: #eee;
+    width: 100%;
+    font-size: 18px;
+}
+
+button{
+    background: navy;
+    color: white;
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.contact-info {
+    padding: 50px 20px;
+    margin: 20px;
+    background-color: navy;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white
+}
+
+.info {
+    padding: 20px 0;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.footer {
+    background-color: #f9f9f9;
+    text-align: center;
+}
+/* You have now completed designing a site in HTML and CSS */

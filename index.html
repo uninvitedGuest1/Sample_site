@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- our page title -->
+        <title>website</title>
+
+        <!-- link to the file containing our styles -->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <!-- We add class attribute inside tags so that we can be able to call it and style it alone instead of styling all divs by calling div inside our css -->
+        <!-- The name you assign to a class is whatever you want it to be. you can try using names that you are comfortable with -->
+
+        <!-- this div called container is going to wrap everything on my web page -->
+        <div class="container">
+            <!-- Section is just like div. you can use them interchangeably -->
+            <!-- main div is going to wrap the navigation bar and those words you see first when you open the site -->
+            <section class="main">
+                <!-- navigation bar -->
+                <div class="navbar">
+                    <!-- The span class is used to wrap line tags such as p, a, h1-h6, so that we can style them -->
+                    <span class="logo"><a href="#">Organizer</a></span>
+                    <!-- unordered list for storing navbar items is the "ul" tag-->
+                    <ul>
+                        <!-- single list item is called using the "li" tag -->
+                        <!-- we're going to have a list of links -->
+                        <!-- when we put "#" inside "href" it means don't send us anywhere. we do this because we must add href for html to recognize an "a" tag as a link-->
+                        <li><a href="#">Home</a></li>
+                        <!-- we say #services to mean take us to the div with an id of services but on this page. for now just keep this in mind, you will see what I mean when you reach services section. For now you may just add this and believe what I say-->
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- This is the div containing the words you see on opening the site -->
+                <div class="hero">
+                    <h1>We shall add method to your madness</h1>
+                    <p>Our tools will provide you with stress free organization methods</p>
+                    <a href="#">Start for free</a>
+                    <img src="1.svg" >
+                </div>
+            </section>
+
+            <!-- Now I have added something new. "id". well... it works just like "class" but in the case of "id" it is not advised to have more than one item with the same "id"-->
+            <section id="services">
+                <h1>Services</h2>
+                <!-- This time we shall use an ordered list which we call by using "ol" tag -->
+                <ol>
+                    <!-- last time we used "a" tags inside our list items, this time we shall use other stuff just so you know that you can nest many things inside this tag -->
+                    <li class="left">
+                        <div class="item">
+                            <h2>Document Organizer</h2>
+                            <p>Our document Organizer uses machine learning algorithms to scan through you documents and categorize them into clusters that will make it easy for you to access them later on</p>
+                        </div>
+                    </li>
+                    <li class="right">
+                        <div class="item">
+                            <h2>Item Schedule</h2>
+                            <p>Don't forget your anniversary this year!!! Timely reminders will have you stay on top of your deadlines and yet not miss out on the little things that truly make life beautiful</p>
+                        </div>
+                    </li>
+                    <li class="left">
+                        <div class="item">
+                            <h2>Music selector</h2>
+                            <p>Since ancient times, music and productivity have been inseperable... We are able to find the right music to best suit your current mood and boost you productivity by atleast 10X</p>
+                        </div>   
+                    </li>
+                </ol>
+            </section>
+            <section id="about">
+                <h2>What is Organizer all about?</h2>
+                <p>Effeciency! Our love for effeciency is like none other. our tools are purposed to create the ultimate work-life balance that the world is currently searching for. Now that you're here, don't be the fish who searches for water. <a href="#"> download</a> our app today and get started. Now you are the fish who knows what water is</p>
+            </section>
+            <section id="contact">
+                <form method="post" action="index.html">
+                    <h2>We want to hear from you!</h2>
+                    <p> If you have plenty to say, feel free to schedule a date. How many sugars would you like in your coffee?</p>
+                    <span class="line"></span>
+                    <div class="inputs">
+                        <input type="text" placeholder="your name" class="text1">
+                        <input type="email" placeholder="your email" style="margin: 0 20px;">
+                        <input type="text" placeholder="subject"><br>
+                    </div>
+                    <textarea placeholder="your message" rows:="30"></textarea>
+                    <!-- you can use this as your submit button
+                        <input type="submit" value="send message">
+                    but i prefer to use button
+                    -->
+                    <button type="submit">Send message</button>
+                </form>
+                <div class="contact-info">
+                    <div class="info">
+                    <p>Phone</p>
+                    <p>+256313999</p>
+                    </div>
+                    <div class="info">
+                    <p>email</p>
+                    <p>sochaka27@gmail.com</p>
+                    </div>
+                    <div class="info">
+                    <p>address</p>
+                    <p>where you are</p>
+                    </div>
+                    <div class="info">
+                    <p>Website</p>
+                    <p>index.html</p>
+                    </div>
+                </div>
+            </section>
+            <div class="footer">
+              <p>Copyright © 2022 Organizer. All Rights Reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>
